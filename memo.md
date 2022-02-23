@@ -11,4 +11,13 @@ Webサーバーコンテナを作る（nginx）
 8. webサーバー動作確認
   デモファイル作成（src/public）
   http://localhost:8080/phpinfo.php
-9. 
+Laravelをインストール
+9. appコンテナに入ってLaravelにインストール
+  appコンテナ内に入る
+  `docker compose exec app bash`
+  コンテナ内でLaravelインストール
+  `composer create-project --prefer-dist "laravel/laravel=9.*" .`
+  権限設定
+  `chmod -R 777 storage bootstrap/cache`
+  バージョン確認
+  `php artisan -V`
